@@ -1,0 +1,14 @@
+<h1>Scrabble#game</h1>
+<p>Find me in app/views/scrabble/game.html.erb</p>
+<h3>Letters you can use: </h3>
+<ul>
+  <% @grid.each do |letter| %>
+    <li style="display: inline"><%= letter %></li>
+  <% end %>
+</ul>
+
+<form action="/score">
+  <label for="word">Your word</label>
+  <input type="text" id="word" placeholder="enter a word" name="word">
+  <input type="submit" value="Submit">
+</form>
